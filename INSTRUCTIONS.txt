@@ -1,0 +1,44 @@
+This software accompanies Wichmann, "Modeling language family expansions"
+(Diachronica, 2017).
+
+Put all files in one and the same folder.
+
+Zipped files must be unzipped. 
+
+In R, do File > Change dir... to the directory where the files are.
+
+Do File > Open script and chose language_diffusion.R.
+
+Click on the script and do Edit > Select all.
+
+Now the program is read into memory and can be used. It does not require
+the installation of any extra R packages.
+
+Click on the console and write, for instance, migrate(10, "F_11_a.top").
+This runs the program with the setting ch = 10 on the file = "F_11_a.top".
+The value of ch can be different, and so can the file name, but the latter
+should be a *.top output of the language family simulation program at 
+http://dx.doi.org/10.5061/dryad.4gg07 (Folder 1) and alternatively available
+at https://github.com/Sokiwi/PhylogenySimulations.
+
+F_11_a.top is provided here as an example. Also required is a corresponding 
+*.par file, here F_11_a.par. F_11_a.top represents the topology pictured 
+in Wichmann (2017), Fig. 1. The *.par file describes the parameter settings
+for the simulated phylogeny. For the purposes of language_diffusion.R the
+only information used is the number of time steps in the simulation.
+
+Output of the program are two files, giving respectively the latitudes 
+and longitudes of different lineages of the family. Each column represents 
+the coordinate for places visited by the lineage, the top coordinate
+being the starting point and the bottom one the final station. Column
+headings are numbers representing lineage names (the numbers were changed in 
+Wichmann (2017), Fig. 1, for pedagogical purposes but otherwise it it the
+same phylogeny).
+
+The program make_family_map.R is not essential, but is useful for depicting 
+the distribution of languages with their origin and intermediate stations
+as in Figs. 2-5 of Wichmann (2017). It requires the following R packages to
+have been installed: OpenStreetMap, rgeos, maptools, rJava argosfilter.
+Once this is done the program can be read into memory, and it is started
+by writing map("file"), where "file" is the filename minus suffix of the
+files being used, for instance "F_11_a").

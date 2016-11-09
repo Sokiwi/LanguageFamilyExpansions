@@ -1,0 +1,12 @@
+N = 40 amount of words
+S = 15 amount of sound symbolic signals
+P = 0.26 probability of signals
+M = 15 2^M is max number of languages in a family
+Bsc = 0.1 bursting coefficient split -> change
+Bcs = 0 bursting coefficient change -> split
+Bp = 5 time steps during which bursting persists
+st = 114 number of time steps
+pl = 0.45 probability of a lexical change
+pp = 0.45 probability of a phonological change
+ps = 0.03 base probability of a split
+pe = 0.004 probability of extinction
